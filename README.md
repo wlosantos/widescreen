@@ -7,4 +7,4 @@ Widescreen é um projeto de estudo em html5 e javascript, onde o objetivo é uma
 + O nome na tela é configurada quando se clica nele.
 + A hora e data também são dinâmicas.
 
-![](/home/wendellopes/novaProgramacao/cursos/udemy/jsTypescript/independentes/widescreen/assets/img/widescreen.jpg)
+![](https://github.com/wlosantos/widescreen/blob/master/assets/img/widescreen.jpg)
