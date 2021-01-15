@@ -6,14 +6,20 @@ const display = {
   name: '',
   focus: '',
   date: '',
+  menu: '',
+  previsao: '',
+  workflow: '',
 
   // DOM Elements
   fetchElements: function(){
     this.widescreen = document.querySelector('#widescreen');
-    this.time     = document.querySelector('#time');
-    this.greeding = document.querySelector('#greeding');
-    this.name     = document.querySelector('#name');
-    this.date    = document.querySelector('#date');
+    this.time       = document.querySelector('#time');
+    this.greeding   = document.querySelector('#greeding');
+    this.name       = document.querySelector('#name');
+    this.date       = document.querySelector('#date');
+    this.menu       = document.querySelector('#menu');
+    this.previsao   = document.querySelector('#previsao');
+    this.workflow   = document.querySelector('#workflow');
     // console.log(this.time)
   },
 
@@ -48,6 +54,7 @@ const display = {
     if (hour < 12) {
       this.greeding.innerText = 'Bom dia';
       document.body.style.backgroundImage = 'url("./assets/img/morning.jpg")';
+      this.getColor();
     } else if (hour < 18) {
       this.greeding.innerText = 'Boa tarde';
       document.body.style.backgroundImage = 'url("./assets/img/afternoon.jpg")';
@@ -56,10 +63,16 @@ const display = {
       document.body.style.backgroundImage = 'url("./assets/img/nigth.jpg")';
     }
   },
+// Color in night
+  getColor: function(){
+    this.widescreen.style.color = "#ffffff";
+    this.menu.style.color = "#ffffff";
+    this.previsao.style.color = '#ffffff';
+  },
 
 // Setting Name
   getName: function(){
-    let name = localStorage.getItem('name') !== null ? localStorage.getItem('name') : '[digite seu nome]';
+    let name = localStorage.getItem('name') !== null ? localStorage.getItem('name') : 'Wendel Lopes';
     this.name.innerText = name;
   },
 
@@ -75,6 +88,14 @@ const display = {
     }
   },
 
+  actionMenu: function(){
+    this.menu.addEventListener('click', this.wdCadastro)
+  },
+
+  wdCadastro: function(){
+
+  },
+
 // Initializable
   init: function(){
     console.log('Projeto Inicializado');
@@ -84,6 +105,7 @@ const display = {
     this.salutation();
     this.getName();
     this.setName();
+    this.actionMenu();
   }
 }
 

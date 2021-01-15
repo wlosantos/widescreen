@@ -24,7 +24,7 @@ body {
   align-items: center;
   text-align: center;
   color: #000;
-  z-index: -1;
+  /* z-index: -1; */
   position: relative;
 }
 
@@ -33,9 +33,19 @@ body {
   font-size: 6rem;
   opacity: var(--opacity-first);
 }
+
 #date {
   margin: 0px;
   opacity: var(--opacity-first);
+}
+
+#menu {
+  /* z-index: 100; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 h1 {
@@ -52,7 +62,7 @@ h2 {
 }
 
 #previsao {
-  z-index: 2;
+  /* z-index: 100; */
   position: absolute;
   top: 0;
   right: 0;
@@ -67,6 +77,29 @@ h2 {
 
 #previsao .bx {
   font-size: 1.3em;
+}
+
+#workflow {
+  display: none;
+  /* z-index: 50; */
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center;
+  background-color: #fff;
+  width: 400px;
+  height: 400px; */
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+.workarea {
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  background-color: #ddd;
 }
 
 @media (max-width: 700px) {
